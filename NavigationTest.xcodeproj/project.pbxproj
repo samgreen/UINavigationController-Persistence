@@ -14,8 +14,8 @@
 		A26DE5AD15C9C9EB0086B762 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A26DE5AC15C9C9EB0086B762 /* main.m */; };
 		A26DE5B115C9C9EB0086B762 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A26DE5B015C9C9EB0086B762 /* AppDelegate.m */; };
 		A26DE5B415C9C9EB0086B762 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A26DE5B315C9C9EB0086B762 /* ViewController.m */; };
-		A26DE5B715C9C9EB0086B762 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = A26DE5B515C9C9EB0086B762 /* ViewController_iPhone.xib */; };
-		A26DE5BA15C9C9EB0086B762 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = A26DE5B815C9C9EB0086B762 /* ViewController_iPad.xib */; };
+		A26DE5B715C9C9EB0086B762 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A26DE5B515C9C9EB0086B762 /* ViewController.xib */; };
+		A26DE5C315C9CAE90086B762 /* UINavigationController+Persistence.m in Sources */ = {isa = PBXBuildFile; fileRef = A26DE5C215C9CAE90086B762 /* UINavigationController+Persistence.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,8 +31,9 @@
 		A26DE5B015C9C9EB0086B762 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A26DE5B215C9C9EB0086B762 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		A26DE5B315C9C9EB0086B762 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		A26DE5B615C9C9EB0086B762 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
-		A26DE5B915C9C9EB0086B762 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		A26DE5B615C9C9EB0086B762 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		A26DE5C115C9CAE90086B762 /* UINavigationController+Persistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Persistence.h"; sourceTree = "<group>"; };
+		A26DE5C215C9CAE90086B762 /* UINavigationController+Persistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Persistence.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,12 +80,12 @@
 		A26DE5A615C9C9EB0086B762 /* NavigationTest */ = {
 			isa = PBXGroup;
 			children = (
+				A26DE5C015C9CAC40086B762 /* Categories */,
 				A26DE5AF15C9C9EB0086B762 /* AppDelegate.h */,
 				A26DE5B015C9C9EB0086B762 /* AppDelegate.m */,
 				A26DE5B215C9C9EB0086B762 /* ViewController.h */,
 				A26DE5B315C9C9EB0086B762 /* ViewController.m */,
-				A26DE5B515C9C9EB0086B762 /* ViewController_iPhone.xib */,
-				A26DE5B815C9C9EB0086B762 /* ViewController_iPad.xib */,
+				A26DE5B515C9C9EB0086B762 /* ViewController.xib */,
 				A26DE5A715C9C9EB0086B762 /* Supporting Files */,
 			);
 			path = NavigationTest;
@@ -99,6 +100,15 @@
 				A26DE5AE15C9C9EB0086B762 /* NavigationTest-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A26DE5C015C9CAC40086B762 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				A26DE5C115C9CAE90086B762 /* UINavigationController+Persistence.h */,
+				A26DE5C215C9CAE90086B762 /* UINavigationController+Persistence.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,8 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A26DE5AB15C9C9EB0086B762 /* InfoPlist.strings in Resources */,
-				A26DE5B715C9C9EB0086B762 /* ViewController_iPhone.xib in Resources */,
-				A26DE5BA15C9C9EB0086B762 /* ViewController_iPad.xib in Resources */,
+				A26DE5B715C9C9EB0086B762 /* ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +177,7 @@
 				A26DE5AD15C9C9EB0086B762 /* main.m in Sources */,
 				A26DE5B115C9C9EB0086B762 /* AppDelegate.m in Sources */,
 				A26DE5B415C9C9EB0086B762 /* ViewController.m in Sources */,
+				A26DE5C315C9CAE90086B762 /* UINavigationController+Persistence.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,20 +192,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		A26DE5B515C9C9EB0086B762 /* ViewController_iPhone.xib */ = {
+		A26DE5B515C9C9EB0086B762 /* ViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A26DE5B615C9C9EB0086B762 /* en */,
 			);
-			name = ViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		A26DE5B815C9C9EB0086B762 /* ViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A26DE5B915C9C9EB0086B762 /* en */,
-			);
-			name = ViewController_iPad.xib;
+			name = ViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

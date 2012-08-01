@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 
+#import "UINavigationController+Persistence.h"
+
 @interface ViewController ()
 
 @end
@@ -18,6 +20,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    self.title = @"Some VC";
 }
 
 - (void)viewDidUnload
@@ -33,6 +36,14 @@
     } else {
         return YES;
     }
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    ViewController *newVC = [[ViewController alloc] init];
+    [self.navigationController pushViewController:newVC animated:YES];
+    [newVC release];
+    
+    [self.navigationController saveNavigationStack];
 }
 
 @end
