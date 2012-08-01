@@ -1,4 +1,4 @@
-#### UINavigationController Persistence ####
+# UINavigationController Persistence #
 
 UINavigationController is one of the core building blocks on iOS. This category will allow you to save and load a UINavigationController's view controller stack. This will allow you to instantly return your users to their exact location in your app's view hierarchy.
 
@@ -30,6 +30,8 @@ When your application starts up, you can check if you have a saved state like so
         navigationController = [[UINavigationController alloc] initWithRootViewController:someViewController];
         [someViewController release];
     }
+
+### Custom Paths ###
 
 In case the default locations don't work for your application, or if you would like to persist multiple UINavigationController stacks, you may optionally pass an NSString as a path to serialize the data.
 
